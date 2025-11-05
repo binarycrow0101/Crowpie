@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Crowhurst Art</title>
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; margin: 0; padding: 2rem; }
+    h1 { text-align: center; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .piece { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; }
+    img { width: 100%; border-radius: 8px; }
+    .info { text-align: center; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Bird Art by Alex Crowhurst</h1>
+  <div class="gallery">
+    <div class="piece">
+      <img src="little-owl.jpg" alt="Little Owl">
+      <div class="info">
+        <strong>Little Owl</strong><br>
+        Watercolour & Ink — £50<br>
+        <a href="mailto:alex@example.com?subject=Little Owl Painting">Email to purchase</a>
+      </div>
+    </div>
+    <div class="piece">
+      <img src="chaffinch.jpg" alt="Chaffinch">
+      <div class="info">
+        <strong>Chaffinch</strong><br>
+        Watercolour & Ink — £45<br>
+        <a href="mailto:alex@example.com?subject=Chaffinch Painting">Email to purchase</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
