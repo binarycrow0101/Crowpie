@@ -33,6 +33,26 @@
       </div>
     </div>
   </div>
+
+  <!-- Script to halve image display size after load -->
+  <script>
+    window.addEventListener('load', () => {
+      const images = document.querySelectorAll('.gallery img');
+      images.forEach(img => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Wait for image to be fully loaded
+        img.addEventListener('load', () => {
+          const newWidth = img.naturalWidth / 2;
+          const newHeight = img.naturalHeight / 2;
+          canvas.width = newWidth;
+          canvas.height = newHeight;
+          ctx.drawImage(img, 0, 0, newWidth, newHeight);
+          img.src = canvas.toDataURL('image/jpeg', 0.9);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
