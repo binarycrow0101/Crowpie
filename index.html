@@ -17,10 +17,11 @@
       margin-bottom: 2rem;
     }
 
+    /* Default layout — desktop */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
     }
 
     .piece {
@@ -29,10 +30,15 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       padding: 1rem;
       text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .piece:hover {
+      transform: scale(1.03);
     }
 
     .piece img {
-      width: 80%; /* smaller image size */
+      width: 80%; /* image size relative to its card */
       border-radius: 8px;
       display: block;
       margin: 0 auto;
@@ -50,6 +56,29 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Tablet view (2–3 images per row) */
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+      .piece img {
+        width: 85%;
+      }
+    }
+
+    /* Mobile view (1–2 images per row) */
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      body {
+        padding: 1rem;
+      }
+      .piece img {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -77,5 +106,3 @@
   </div>
 </body>
 </html>
-
-
