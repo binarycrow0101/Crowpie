@@ -14,7 +14,25 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Linktree button */
+    .linktree-button {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 2rem auto;
+      background: #39e09b;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .linktree-button:hover {
+      background: #2edc88;
     }
 
     /* Default layout — desktop */
@@ -37,7 +55,7 @@
       transform: scale(1.03);
     }
 
-     /* --- Disclaimer section --- */
+    /* --- Disclaimer section --- */
     .disclaimer {
       text-align: center;
       margin-top: 3rem;
@@ -97,6 +115,9 @@
 <body>
   <h1>Original Art by Alex Crowhurst</h1>
 
+  <!-- Linktree button -->
+  <a class="linktree-button" href="https://linktr.ee/alexcrowhurst" target="_blank">Visit My Linktree</a>
+
   <div class="gallery">
     <div class="piece">
       <img src="Little Guardian.jpg" alt="Little Guardian">
@@ -116,7 +137,7 @@
       </div>
     </div>
 
-       <!-- ✨ New artwork (just copy and update this block) -->
+    <!-- ✨ New artwork (just copy and update this block) -->
     <div class="piece">
       <img src="ChaffinchonBramble.jpg" alt="Chaffinch">
       <div class="info">
@@ -127,10 +148,8 @@
     </div>
   </div>
 
-   <div class="disclaimer">
+  <div class="disclaimer">
     Please note that colours may vary slightly from those shown on screen due to differences in monitor settings and lighting. Every effort is made to ensure accurate representation of each artwork.
   </div>
 </body>
 </html>
-
-
